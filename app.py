@@ -19,10 +19,11 @@ warriors = []
 
 team_list = [panthers, bandits, warriors]
 
-print('BASKETBALL TEAM STATS TOOL')
-print('\n'*1)
 
-def start_game():    
+
+def start_game():
+    print('BASKETBALL TEAM STATS TOOL')
+    print('\n'*1)
     print('-'*4 + 'MENU' + '-'*4) 
     print('\n'*1)
 def main_menu():
@@ -44,7 +45,7 @@ def main_menu():
             break
         elif entry == 2:
             print('Goodbye!')
-            break
+            quit()
         else:
             print('Please enter a valid choice')
             continue
