@@ -5,10 +5,6 @@ players = copy.deepcopy(constants.PLAYERS)
 
 teams = copy.deepcopy(constants.TEAMS)
 
-height_integer = []
-
-experience = []
-
 player_names = []
 
 num_on_teams = len(players)/len(teams)
@@ -78,16 +74,15 @@ def main_menu():
                 quit()
             else:
                 print('Oh no! Please enter Y or N.')
-        
+            
 def clean_data():
     for player in players:
         player_height = player['height'].split(' ')
-        height_integer.append(int(player_height[0]))
-        experience = player['experience']
-        if experience == 'YES':
-            experience = True
-        if experience == 'NO':
-            experience = False
+        player['height'] = (int(player_height[0]))
+        if player['experience'] == 'YES':
+            player['experience'] = True
+        if player['experience'] == 'NO':
+            player ['experience'] = False
     
 def balance_team():
     for player in players:
